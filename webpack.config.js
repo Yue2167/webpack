@@ -1,21 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
+const base=require('./webpack.config.base.js')
+
 module.exports = {
-  mode: "development",
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist",
-  },
-  entry: "./src/index.js", //这个./src/index.js是自己设置的
-  output: {
-    filename: "index.[contenthash].js",
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "Yue",
-      template: "src/assets/index.html",
-    }),
-  ],
+  ...base,
   module: {
     rules: [
       {
