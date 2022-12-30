@@ -1,5 +1,5 @@
 import x from './x.js'
-import jpg from './assets/1.jpg'
+import jpg from './assets/111.jpg'
 console.log(jpg)
 
 const div=document.getElementById('app');
